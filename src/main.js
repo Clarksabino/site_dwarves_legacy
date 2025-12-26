@@ -1,3 +1,5 @@
+import './style.css';
+
 // Intersection Observer for reveal animations
 const setupRevealAnimations = () => {
   const observerOptions = {
@@ -25,7 +27,7 @@ const setupSmoothScroll = () => {
       e.preventDefault();
       const targetId = this.getAttribute('href');
       if (targetId === '#') return;
-      
+
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         targetElement.scrollIntoView({
@@ -40,6 +42,6 @@ const setupSmoothScroll = () => {
 document.addEventListener('DOMContentLoaded', () => {
   setupRevealAnimations();
   setupSmoothScroll();
-  
+
   console.log('DwarveS Legacy Site Initialized');
 });
